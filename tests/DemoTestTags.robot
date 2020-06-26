@@ -47,8 +47,7 @@ SampleTest
 	ClickText	REVIEW ORDER
 	VerifyTexts	ITEMS IN ORDER
 	ClickText	PLACE ORDER
-ITS_ThankyouPage
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
 	LogScreenshot
-	
+	LogPage
