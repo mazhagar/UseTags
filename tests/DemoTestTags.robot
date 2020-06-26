@@ -11,7 +11,8 @@ SampleTest
 	Appstate       	FrontPage                     
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides                  
-	HoverText      	Shop Now                       
+	HoverText      	Shop Now 
+	ClickText	Choose your Size
 	DropDown       	Choose Options:   40,000 Gallon Algae-Free Kit
 	ClickText      	+                                
 	ClickText      	Add to			cart                    
