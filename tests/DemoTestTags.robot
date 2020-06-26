@@ -17,11 +17,11 @@ SampleTest
 	ClickText      	+                                
 	ClickText      	Add to			cart                    
 	VerifyText     	Your Shopping Cart   
-	ClickText      	View						Cart (2)               
+	ClickText      	View						Cart               
 	VerifyText     	Shopping Cart   
 	ClickText      	Check Out                        
 	VerifyText     	Secure Checkout   
-	ClickText      	Guest Checkout                   null
+	ClickText      	Guest Checkout                  
 	VerifyText     	Shipping Address   
 	TypeText       	First Name *   Test
 	TypeText       	Last Name*   Test
