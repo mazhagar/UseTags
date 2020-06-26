@@ -25,14 +25,16 @@ SampleTest
 	VerifyText     	Shipping Address   
 	TypeText       	First Name *   Test
 	TypeText       	Last Name*   Test
-	TypeText       	Email*   test23@mail.com                          
-	VerifyInputValue	true   true
+	TypeText       	Email*   test23@mail.com     
+	ClickCheckbox	checkBrontoEmailAddress
+	VerifyInputValue	checkBrontoEmailAddress   false
 	TypeText       	Address *   test123
 	TypeText       	City*   Walker
 	DropDown       	State
 					*   Maryland
-	TypeText       	Zip/Postal Code*   12345                        
-	VerifyInputValue	true   true
+	TypeText       	Zip/Postal Code*   12345           
+	ClickCheckbox	shippingAddressAsBilling
+	VerifyInputValue	shippingAddressAsBilling   true
 	TypeText       	Telephone
 						*   343
 	TypeText       	Telephone
@@ -42,9 +44,7 @@ SampleTest
 	ClickText      	Continue                         
 	VerifyText     	Payment Details   
 	HoverText      	Credit Card                      
-	ClickCheckbox  	Credit Card   
-	ClickCheckbox  	   
-	ClickCheckbox  	Credit Card   
+	VerifyInputValue  	Credit Card   true  
 	DropDown       	Card Number   Visa
 	TypeText       	Card Number   4111111111111111
 	TypeText       	Name On Card   test
