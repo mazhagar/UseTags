@@ -7,40 +7,51 @@ Suite Teardown       End suite
 
 *** Test Cases ***
 
-ITS_SmokeTest
-	[tags]            smoke
-	Appstate       	    FrontPage
-	ClickText      	    ${Mini_Quick}
-	TypeText	quantity	3
-	TypeText	skuId		${ItemNumber_Quick}
-	ClickText	${AddToCartButton_Quick}
-	#Paypal Checkout
-	#ClickElement           //*[@id\="replaced_with_paypal_check_button"]/input[5]
-	#TypeText	email	rsivakumar@dss-partners.com
-	#ClickText	Next
-	#TypeText	password	raviS9840@
-	#ClickText	Log in
-	#ClickText	Continue
-	ClickElement	//*[@id\="cartform"]/div[3]/div[3]/div[3]/div[2]/input[3]
-ITS_RegressionTest
-   	[tags]              regression
-	Appstate       	    Frontpage
-	LogScreenshot
-	HoverText      	    Chemicals
-	ClickText      	    Pool Algaecides
-	LogScreenshot
-	ClickText           In The Swim Pool Algaecide
-	# Verify that quantity for item Y1004 is 1.. Use item nro as anchor
-	VerifyInputValue    QTY:            1       anchor=Y1004
-	# Buy 10 and add to cart:
-	TypeText            QTY:            10      anchor=Y1004
-	LogScreenshot
-	ClickText           ADD TO CART             anchor=Y1004
-	LogScreenshot
-	# Some basic verifications:
-	VerifyTexts         Description: 2 x 1/2 gallons, $39.99, 10, $399.90, View Cart (10)
-	# Get Subtotal to variable.. We only want text after * : -chars
-	${SUBTOTAL}         GetText         Estimated SUBTOTAL      between=* :???
-	# and check that it's expected:
-	ShouldBeEqual       $399.90       ${SUBTOTAL}
-	ClickText           View Cart
+SampleTest     	   
+	Appstate       	FrontPage                     
+	HoverText      	Chemicals                        
+	ClickText      	Pool Algaecides                  
+	HoverText      	${varName}                       
+	DropDown       	Choose Options:   40,000 Gallon Algae-Free Kit
+	ClickText      	+                                
+	ClickText      	Add to			cart                    
+	VerifyText     	Your Shopping Cart   
+	ClickText      	View						Cart (2)               
+	VerifyText     	Shopping Cart   
+	ClickText      	Check Out                        
+	VerifyText     	Secure Checkout   
+	ClickText      	Guest Checkout                   null
+	VerifyText     	Shipping Address   
+	TypeText       	First Name *   Test
+	TypeText       	Last Name*   Test
+	TypeText       	Email*   test23@mail.com                          
+	VerifyInputValue	true   true
+	TypeText       	Address *   test123
+	TypeText       	City*   Walker
+	DropDown       	State
+					*   Maryland
+	TypeText       	Zip/Postal Code*   12345                        
+	VerifyInputValue	true   true
+	TypeText       	Telephone
+						*   343
+	TypeText       	Telephone
+						*   343
+	TypeText       	Telephone
+						*   4344
+	ClickText      	Continue                         
+	VerifyText     	Payment Details   
+	HoverText      	Credit Card                      
+	ClickCheckbox  	Credit Card   
+	ClickCheckbox  	   
+	ClickCheckbox  	Credit Card   
+	DropDown       	Card Number   Visa
+	TypeText       	Card Number   4111111111111111
+	TypeText       	Name On Card   test
+	TypeText       	CVV/Security Code   123
+	DropDown       	Expiration Date   03-Mar
+	DropDown       	Expiration Date   2032
+	ClickText      	Review Order                     
+	TypeText       	Password   123123
+	VerifyText     	ORDER SUMMARY   
+	ClickText      	Place Order                      
+	VerifyText     	Thank you for your order!   
