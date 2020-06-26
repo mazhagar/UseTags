@@ -30,29 +30,25 @@ SampleTest
 	VerifyCheckboxValue	checkBrontoEmailAddress   off
 	TypeText       	Address *   test123
 	TypeText       	City*   Walker
-	DropDown       	State
-					*   Maryland
-	TypeText       	Zip/Postal Code*   12345           
-	ClickCheckbox	shippingAddressAsBilling	on
-	VerifyCheckboxValue	shippingAddressAsBilling   on
-	TypeText       	Telephone
-						*   343
-	TypeText       	Telephone
-						*   343
-	TypeText       	Telephone
-						*   4344
-	ClickText      	Continue                         
-	VerifyText     	Payment Details   
-	HoverText      	Credit Card                      
-	VerifyInputValue  	Credit Card   true  
-	DropDown       	Card Number   Visa
-	TypeText       	Card Number   4111111111111111
-	TypeText       	Name On Card   test
-	TypeText       	CVV/Security Code   123
-	DropDown       	Expiration Date   03-Mar
-	DropDown       	Expiration Date   2032
-	ClickText      	Review Order                     
-	TypeText       	Password   123123
-	VerifyText     	ORDER SUMMARY   
-	ClickText      	Place Order                      
-	VerifyText     	Thank you for your order!   
+	DROPDOWN            shippingAddress_state          California
+	TypeText           Zip/Postal Code  55632
+	ClickCheckbox		shippingAddressAsBilling		on
+	VerifyCheckboxValue	shippingAddressAsBilling		on
+	TypeText         Telephone        1234567890
+	LogScreenshot
+	ClickText           CONTINUE
+	VerifyText	Payment Details
+	DROPDOWN        billing_creditCartType		visa
+	TypeText	Card Number	4263982640269299
+	TypeText	Name On Card	TestCard
+	TypeText	CVV/Security Code	123
+	DROPDOWN	billing_expirationDate		06-Jun
+	DROPDOWN	billing_expirationYear		2021
+	ClickText	REVIEW ORDER
+	VerifyTexts	ITEMS IN ORDER
+	ClickText	PLACE ORDER
+ITS_ThankyouPage
+	VerifyTexts	Thank you for your order!
+	${ORDERID}	GetText		Your Order ID is	between=???
+	LogScreenshot
+	
