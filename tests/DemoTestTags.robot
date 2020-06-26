@@ -13,7 +13,7 @@ SampleTest
 	ClickText      	Pool Algaecides                  
 	HoverText      	Shop Now 
 	ClickText	Choose your Size
-	DropDown       	Choose Options:   40,000 Gallon Algae-Free Kit
+	DropDown       	Choose Options:   Y1580
 	ClickText      	+                                
 	ClickText      	Add to			cart                    
 	VerifyText     	Your Shopping Cart   
