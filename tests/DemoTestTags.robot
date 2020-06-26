@@ -8,7 +8,8 @@ Suite Teardown       End suite
 *** Test Cases ***
 
 SampleTest     	   
-	Appstate       	FrontPage                     
+	Appstate       	FrontPage       
+	LogScreenshot	C:\\Users\\Maari\\Desktop\\Reports\\test.png
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides
 	CaptureIcon	Shop Now
