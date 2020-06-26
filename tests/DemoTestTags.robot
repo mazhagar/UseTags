@@ -17,7 +17,7 @@ SampleTest
 	ClickText      	+                                
 	ClickText      	Add to			cart                    
 	VerifyText     	Your Shopping Cart   
-	ClickText      	View						Cart               
+	ClickText      	View Cart               
 	VerifyText     	Shopping Cart   
 	ClickText      	Check Out                        
 	VerifyText     	Secure Checkout   
