@@ -9,7 +9,7 @@ Suite Teardown       End suite
 
 SampleTest     	   
 	Appstate       	FrontPage       
-	LogScreenshot	
+	LogScreenshot	C:\Users\Maari\Desktop\Reports
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides
 	CaptureIcon	Shop Now
