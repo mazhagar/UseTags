@@ -26,14 +26,14 @@ SampleTest
 	TypeText       	First Name *   Test
 	TypeText       	Last Name*   Test
 	TypeText       	Email*   test23@mail.com     
-	ClickCheckbox	checkBrontoEmailAddress
+	ClickCheckbox	checkBrontoEmailAddress		off
 	VerifyInputValue	checkBrontoEmailAddress   false
 	TypeText       	Address *   test123
 	TypeText       	City*   Walker
 	DropDown       	State
 					*   Maryland
 	TypeText       	Zip/Postal Code*   12345           
-	ClickCheckbox	shippingAddressAsBilling
+	ClickCheckbox	shippingAddressAsBilling	on
 	VerifyInputValue	shippingAddressAsBilling   true
 	TypeText       	Telephone
 						*   343
