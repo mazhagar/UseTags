@@ -9,12 +9,11 @@ Suite Teardown       End suite
 
 SampleTest     	   
 	Appstate       	FrontPage       
-	LogScreenshot	C:\Users\Maari\Desktop\Reports\test.png
+	LogScreenshot	
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides
 	CaptureIcon	Shop Now
 	HoverText      	Shop Now 
-	CaptureIcon	Choose your Size
 	ClickText	Choose your Size
 	DropDown       	selectBoxSkuId-1   40,000 Gallon Algae-Free Kit
 	ClickText      	+                                
