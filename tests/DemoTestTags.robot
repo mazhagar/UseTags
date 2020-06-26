@@ -1,3 +1,12 @@
+*** Settings ***
+Resource            ../resources/keywords.robot
+Suite Setup          Setup Browser
+Suite Teardown       End suite
+
+
+
+*** Test Cases ***
+
 ITS_SmokeTest
 	[tags]            smoke
 	Appstate       	    FrontPage
