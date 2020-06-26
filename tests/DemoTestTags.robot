@@ -52,4 +52,4 @@ SampleTest
 	VerifyTexts	Thank you for your order!
 	${ORDERID}	GetText		Your Order ID is	between=???
 	LogScreenshot
-	LogPage
+	
