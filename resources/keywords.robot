@@ -2,6 +2,7 @@
 Library             Dialogs
 Library             QWeb
 Library             String
+Library             ScreenCapLibrary  screenshot_module=PyGTK
 
 
 *** Variables ***
