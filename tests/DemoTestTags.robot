@@ -9,7 +9,10 @@ Suite Teardown       End suite
 
 SampleTest     	   
 	Appstate       	FrontPage       
-	LogScreenshot	C:/Users/Maari/Desktop/Reports/test.jpg
+	FOR    ${count}    IN    @{COUNT}
+        Start Element    ${count}
+    	END
+	#LogScreenshot	C:/Users/Maari/Desktop/Reports/test.jpg
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides
 	CaptureIcon	Shop Now
