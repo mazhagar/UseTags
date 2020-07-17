@@ -12,7 +12,7 @@ SampleTest
 	FOR    ${count}    IN    @{COUNT}
         Start Element    ${count}
     	END
-	#LogScreenshot	C:/Users/Maari/Desktop/Reports/test.jpg
+	LogScreenshot	dss/test.jpg
 	HoverText      	Chemicals                        
 	ClickText      	Pool Algaecides
 	CaptureIcon	Shop Now
